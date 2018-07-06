@@ -1,0 +1,490 @@
+@import "bourbon"
+@import "vars.sass"
+@import "app/libs/owl.carousel/dist/assets/owl.carousel.min"
+@import "app/libs/font-awesome/web-fonts-with-css/scss/fontawesome"
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "RobotoRegular", sans-serif
+	overflow-x: hidden
+	color: #111
+
+// isnohome
+
+.isnohome
+	.top-line .sf-menu > li > a 
+		padding: 15px 28px
+	.top-panell
+		padding: 25px 0
+	.slider 
+		.slide
+			padding: 140px 0 40px
+			h2
+				font-size: 36px
+	.owl-dots, .slide-wrap p, .slide-img-wrap 
+		display: none
+	.slide-content
+		.col-md-6
+			width: 100%
+	.slider-wrap .slider-nav div
+		top: 220px
+
+.content
+	padding: 60px 0
+	article
+		img
+			max-width: 100%
+		h1
+			margin-top: 0		
+.services-item
+	&:hover
+		z-index: 2
+		border-color: $accent-color
+		transform: scale(1.05)
+		box-shadow: rgba(0,0,0,.35) 0 0 32px
+		.services-item-image
+			&::before
+				display: none		
+			.far
+				display: none
+		.services-item-stars
+			.fas
+				margin: 0 3px
+				color: $accent-color
+.main-aside
+	.top-panell-box
+		margin: 30px 0
+		h4
+			font-family: "RobotoCondensedBold", sans-serif
+			font-size: em(20px)
+			margin-bottom: 20px
+		li
+			display: block
+			width: 100%
+			opacity: 1
+			padding: 0
+			font-family: "RobotoBold", sans-serif
+			&.active
+				a 
+					background: $accent-color
+					color: #fff
+					.fas
+						color: lighten($accent-color, 30%)
+			a
+				color: #111
+				font-size: em(19px)
+				text-transform: uppercase
+				display: block
+				border-bottom: #f0f0f0 1px solid
+				transition: all .2s ease
+				text-indent: 10px
+				padding:
+					bottom: 8px
+					top: 8px
+					left: 23px
+				&:hover
+					text-decoration: none
+					color: lighten($main-color, 15%)
+				.fas
+					font-size: 14px
+					color: $accent-color
+					top: 12px
+
+
+
+.hidden
+	display: none
+
+strong, b 
+	font-family: "RobotoBold", sans-serif
+	font-weight: normal;	
+
+h1, h2, h3, h4, h5, h6, .button, .h1, .h2, .h3, .h4, .h5, .h6
+	font-family: "RobotoCondensedBold", sans-serif
+	font-weight: normal
+	text-transform: uppercase
+
+.text-right
+	text-align: right
+
+.text-left 
+	text-align: left
+.text-center 
+	text-align: center
+
+.top-line 
+	border-bottom: lighten($main-color, 6%) 1px solid 
+	background: $main-color
+	text-align: center
+	position: relative
+	z-index: 2
+	a 
+		color: #fff
+	ul, li 
+		list-style-type: none
+		padding: 0
+		margin: 0
+	.sf-menu
+		background: $main-color
+		margin: 0 auto -6px
+		float: none
+		display: inline-block
+		font-family: "RobotoCondensedBold", sans-serif
+		font-size: em(15px)
+		a
+			border-bottom: lighten($main-color, 5%) 1px solid
+			border-left: lighten($main-color, 5%) 1px solid
+			border-top: none
+		>li
+			border-bottom: lighten($main-color, 5%) 1px solid
+			background: transparent
+			>a
+				color: #fff
+				border: none
+				padding: 25px 28px
+				.fa 
+					font-size: 11px
+					margin-left: 5px
+					position: relative
+					top: -2px
+			&:hover
+				background: darken($main-color, 3%)
+				>a
+					color: $accent-color
+			ul
+				li
+					background: $main-color
+					&:hover
+						>a
+							color: $accent-color
+					a
+						padding: 10px
+						color: #fff
+	
+
+
+//Top Panel
+
+
+.top-panell
+	background: rgba(lighten($main-color, 2%), .8)
+	color: #fff
+	padding: 50px 0
+	position: absolute
+	width: 100%
+	z-index: 1
+	box-shadow: rgba(255,255,255,.03) 0 3px 0 5px
+	&-content
+		position: relative
+		z-index: 1
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		background-image: url(../img/top-pannel-bg.jpg)
+		z-index: 0
+		opacity: .16
+	&-box
+		h4
+			margin-top: 0
+			font-family: "RobotoCondensedRegular", sans-serif
+			font-size: em(15px)
+			position: relative
+			&::after
+				content: ''
+				width: 100%
+				height: 1px
+				background: $accent-color
+				position: absolute
+				left: 0 
+				bottom: -9px
+				opacity: .4
+		ul, li
+			padding: 0
+			margin: 0
+			list-style-type: none
+		li 
+			display: inline-block
+			font-size: em(12px)
+			opacity: .4
+			width: 48%
+			padding: 0 10px 0 22px
+			position: relative
+			&:only-child
+				min-width: 100% // err
+			.fas
+				position: absolute
+				left: 0
+				top: 6px
+			.far
+				position: absolute
+				left: 0
+				top: 6px
+
+.logo 
+	img
+		max-width: 70%
+	position: relative
+	top: 4px
+
+.top-phone
+	margin-top: -3px
+	font-size: em(18px)
+	font-family: "RobotoCondensedRegular", sans-serif
+	span 
+		font-size: em(12px)
+		opacity: .3
+
+.top-email
+	font-size: em(14px)
+	a 
+		color: #fff
+		text-decoration: underline
+	span 
+		opacity: .3
+
+.top-phone, 
+.top-email
+	.fas 
+		margin-right: 5px 
+
+.button
+	color: #111
+	background: $accent-color
+	border-radius: 2px
+	font-size: em(16px)
+	padding: 10px 35px
+	position: relative
+	transition: background .25s ease
+	border: none
+	&::after
+		content: ''
+		position: absolute
+		background: darken($accent-color, 10%)
+		width: 100%
+		height: 3px
+		bottom: 0
+		left: 0
+		border-bottom-right-radius: 2px		
+		border-bottom-left-radius: 2px
+	&:hover
+		background: lighten($accent-color, 12%)
+		// text-decoration: none
+		// color: #222
+	&:active
+	 	background: darken($accent-color, 10%)
+	 	// text-decoration: none
+	&-small
+		font-size: em(14px)
+		padding: 6px 18px
+		&::after
+			height: 2px
+	&:hover, &:focus
+		text-decoration: none
+		color: #222
+.top-button
+	margin-top: 22px 		
+.slider-wrap
+	display: none
+	position: relative
+	.owl-nav
+		display: none
+	.slider-nav-container
+		position: relative
+	.slider-nav
+		color: #fff
+		font-size: 30px
+		position: absolute
+		width: 100%
+		z-index: 2
+		div
+			cursor: pointer
+			position: absolute
+			top: 380px
+			&:last-child
+				right: 0
+.slider
+	.owl-dots
+		position: absolute
+		bottom: 50px
+		width: 100%;
+		z-index: 2
+		text-align: center
+		.owl-dot
+			margin-right: 7px
+			width: 14px
+			height: 14px
+			border-radius: 14em
+			background: darken($main-color, 10%)
+			border: none
+			transition: background .25s ease
+			&.active
+				background: $accent-color
+	overflow: hidden
+	top: 0
+	width: 100%
+	.slide-wrap
+		float: left
+		&.active
+			h2
+				opacity: 1
+				left: 0
+			p
+				left: 0
+				opacity: .75
+			.slide-img-wrap
+				transform: scale(1)
+				opacity: 1
+	.slide
+		padding-top: 210px
+		color: #fff
+		padding-bottom: 130px
+		position: relative
+		h2
+			font-family: "RobotoCondensedLight", sans-serif
+			font-size: em(48px)
+			margin-top: 0
+			margin-bottom: 20px
+			line-height: em(19px)
+			position: relative
+			left: 100px
+			opacity: 0
+			transition: all 1.5s ease
+			&:first-line
+				color: $accent-color
+		p 
+			font-family: "RobotoLight", sans-serif
+			opacity: 0
+			margin-bottom: 40px
+			position: relative
+			left: 50px
+			transition: all 1.5s ease
+			transition-delay: .25s
+		&-bg
+			background-size: cover
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			&::before
+				content: ''
+				background: $main-color
+				width: 100%
+				height: 100%
+				position: absolute
+				left: 0
+				top: 0
+				opacity: .85
+		&-content
+			position: relative
+			z-index: 1	
+			padding-top: 80px
+.slide-img-wrap
+	img
+		max-width: 100%
+	padding-top: 13px
+	transform: scale(.8)
+	transition: all .5s ease
+	transition-delay: .25s
+	opacity: 0
+
+
+.toggle-mnu 
+	display: block
+	width: 28px
+	height: 28px
+	float: left
+
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: #fff
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)
+.mobile-mnu
+	padding: 8px 15px 5px 15px
+	color: $main-color
+	cursor: pointer
+	background: $accent-color
+	position: fixed
+	z-index: 2
+	b
+		text-align: center
+		display: block
+		font-family: "RobotoRegular", sans-serif
+		font-size: em(14px)
+
+// Teaser
+
+.sect-teaser
+	background: $main-color
+	color: #fff
+	padding: 28px 0 10px
+
+.teaser
+	&-item
+		display: table-row
+		>div
+			padding-bottom: 18px
+	&-count
+		display: table-cell
+		vertical-align: middle
+		&-wrap
+			width: 42px
+			heigth: 42px
+			position: relative
+		.fas::before
+			font-size: 49px
+			color: lighten($main-color, 10%)
+	&-number
+		left: 6px
+		position: absolute
+		top: 9px
+		width: 100%
+		text-align: center
+		font-family: "RobotoCondensedBold", sans-serif
+		font-size: 22px
+		color: $accent-color
+	&-text
+		display: table-cell
+		font-family: "RobotoCondensedLight", sans-serif
+		line-height: 20px
+		padding-left: 20px
+		padding-top: 10px
+		opacity: .28
+		>div
+			margin-top: 10px
+
+
+
